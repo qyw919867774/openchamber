@@ -690,7 +690,7 @@ async function spawnManagedOpenCodeServer(
       output += chunk.toString();
       const lines = output.split('\n');
       for (const line of lines) {
-        if (!line.startsWith('opencode server listening')) continue;
+        if (!line.includes('server listening')) continue;
         const match = line.match(/on\s+(https?:\/\/[^\s]+)/);
         if (!match) {
           cleanup();

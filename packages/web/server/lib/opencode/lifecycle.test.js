@@ -110,7 +110,7 @@ describe('OpenCode lifecycle', () => {
     const child = createMockChild();
     spawnMock.mockImplementationOnce(() => {
       queueMicrotask(() => {
-        child.stdout.emit('data', 'opencode server listening on http://127.0.0.1:45678\n');
+        child.stdout.emit('data', 'dhcoder server listening on http://127.0.0.1:45678\n');
       });
       return child;
     });
@@ -133,7 +133,7 @@ describe('OpenCode lifecycle', () => {
     const child = createMockChild();
     spawnMock.mockImplementationOnce(() => {
       queueMicrotask(() => {
-        child.stdout.emit('data', 'opencode server listening on http://127.0.0.1:45678\n');
+        child.stdout.emit('data', 'dhcoder server listening on http://127.0.0.1:45678\n');
       });
       return child;
     });
@@ -156,7 +156,7 @@ describe('OpenCode lifecycle', () => {
     const child = createMockChild();
     spawnMock.mockImplementationOnce(() => {
       queueMicrotask(() => {
-        child.stdout.emit('data', 'opencode server listening on http://127.0.0.1:45678\n');
+        child.stdout.emit('data', 'dhcoder server listening on http://127.0.0.1:45678\n');
       });
       return child;
     });
@@ -224,7 +224,7 @@ describe('OpenCode lifecycle', () => {
     });
     spawnMock.mockImplementationOnce(() => {
       queueMicrotask(() => {
-        secondChild.stdout.emit('data', 'opencode server listening on http://127.0.0.1:45678\n');
+        secondChild.stdout.emit('data', 'server listening on http://127.0.0.1:45678\n');
       });
       return secondChild;
     });

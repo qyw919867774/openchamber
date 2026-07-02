@@ -301,7 +301,7 @@ export const createOpenCodeLifecycleRuntime = (deps) => {
         stdout += chunk.toString();
         const lines = stdout.split('\n');
         for (const line of lines) {
-          if (!line.startsWith('opencode server listening')) continue;
+          if (!line.includes('server listening')) continue;
           const match = line.match(/on\s+(https?:\/\/[^\s]+)/);
           if (!match) {
             finish(reject, new Error(`Failed to parse server url from output: ${line}`));
